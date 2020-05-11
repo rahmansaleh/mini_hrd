@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from django.db import models
 
 from django.contrib.auth.models import User
@@ -34,7 +35,7 @@ class Karyawan (models.Model):
     jenis_kelamin = models.CharField(max_length=10, choices=JENIS_KELAMIN_CHOICES)
     jenis_karyawan = models.CharField(max_length=10, choices=JENIS_KARYAWAN_CHOICES)
     no_telpon = models.CharField(max_length=30, blank=True)
-    email = models.CharField(max_lengh=100, blank=True)
+    email = models.CharField(max_length=100, blank=True)
     no_rekening = models.CharField(max_length=100)
     pemilik_rekening = models.CharField(max_length=100)
     divisi = models.ForeignKey(Divisi, on_delete=models.CASCADE)
