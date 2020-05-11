@@ -25,3 +25,11 @@ class AkunAdmin (admin.ModelAdmin):
     list_per_page = 25
 
 admin.site.register(Akun, AkunAdmin)
+
+class JabatanAdmin (admin.ModelAdmin):
+    list_display = ['nama', 'keterangan']
+    list_filter = ()
+    search_fields = ['nama']
+    list_per_page = 25
+
+admin.site.register(Jabatan, JabatanAdmin)
