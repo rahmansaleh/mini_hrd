@@ -39,7 +39,7 @@ class Karyawan (models.Model):
     no_rekening = models.CharField(max_length=100)
     pemilik_rekening = models.CharField(max_length=100)
     divisi = models.ForeignKey(Divisi, on_delete=models.CASCADE)
-    Jabatan = models.ForeignKey(Jabatan, on_delete=models.CASCADE)
+    jabatan = models.ForeignKey(Jabatan, on_delete=models.CASCADE)
 
     def __unicode__(self):
         return self.nama
